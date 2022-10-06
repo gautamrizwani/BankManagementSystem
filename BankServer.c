@@ -17,7 +17,24 @@
 
 void connHandler(int connFD);
 
+void red() {
+  printf("\033[1;31m");
+}
+
+void yellow() {
+  printf("\033[1;33m");
+}
+
+void reset() {
+  printf("\033[0m");
+}
+
 void main() {
+	red();
+	printf("Welcome to ");
+	yellow();
+	printf("IIITBank\n");
+	reset();
 	int socFD, connFD;
 	struct sockaddr_in Ser, Cli;
 
